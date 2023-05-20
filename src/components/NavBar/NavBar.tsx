@@ -3,15 +3,11 @@ import React from "react";
 import { CustomDialog } from "../CustomDialog";
 import { FavoriteTable } from ".";
 import { dialogOpenSubject$ } from "../CustomDialog/CustomDialog";
-import { useSelector } from "react-redux";
-import { AppStore } from "@/redux/store";
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type NavBarProps = {};
 
 const NavBar: React.FC<NavBarProps> = () => {
-  const stateFavorites = useSelector((store: AppStore) => store.favorites);
-
   const handleClick = () => {
     dialogOpenSubject$.setSubject = true;
   };
